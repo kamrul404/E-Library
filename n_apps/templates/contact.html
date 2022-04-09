@@ -1,0 +1,32 @@
+
+
+
+{% extends 'basic.html' %}
+{% load static %}
+{% block body %}
+
+<h1 class="text-center mt-5">Get Now</h1>
+  <div class="container">
+    <form class="" method='post'>
+      {% csrf_token %}
+       <div class="row">
+         <div class="col">
+           <label for="exampleFormControlInput1" class="form-label">Books Name</label>
+           <input name='name' class="form-control" placeholder="Selected books" aria-label="Selected
+             books">
+           <label for="exampleFormControlInput1" class="form-label">Payment Transiction ID</label>
+           <input name='TransictionID' class="form-control" id="TransictionID"
+               placeholder="TransictionID">
+
+           <label for="exampleFormControlTextarea1" class="form-label">Your Address</label>
+           <textarea name='Home_Road_Area_PScode' class="form-control" id="Home_Road_Area_PScode"
+                rows="3"></textarea>
+           <div class="mt-2">
+             <input class="btn btn-primary" type="confirm" value="Confirm">
+           </div>
+          </div>
+        </div>
+    </form>
+ </div>
+
+{% endblock %}
